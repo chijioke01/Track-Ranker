@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liberty League Ranker </title>
+</head>
+<body>
+    <form name="events" action="/" method="post">
+        <h2>Find Your Liberty League Rank Today </h2>
+        <h3>Events </h3>
+        <select name='myselect' onchange="textbox()">
+            <option value= event_100meters(men) name = event_100meters(men)>100 Meters (Men)</option>
+            <option value = event_200meters(men) name = event_200meters(men)>200 Meters (Men)</option>
+            <option value = event_400meters(men) name = event_400meters(men)>400 Meters (Men)</option>
+            <option value = event_800meters(men) name = event_800meters(men)>800 Meters (Men)</option>
+            <option value = event_1500meters(men) name = event_1500meters(men)>1500 Meters (Men)</option>
+            <option value = event_5000meters(men) name = event_5000meters(men)>5000 Meters (Men)</option>
+            <option value = event_10,000meters(men) name = event_10,000meters(men)>10000 Meters (Men)</option>
+            <option value = event_110hurdles(men) name = event_110hurdles(men)>110 Hurdles (Men)</option>
+            <option value = event_3000steeplechase(men) name = event_3000steeplechase(men)>3000M Steeplechase (Men)</option>
+            <option value = event_highjump(men) name = event_highjump(men)>High Jump (Men)</option>
+            <option value = event_polevalut(men) name = event_polevalut(men)> Pole Valut (Men) </option>
+            <option value = event_longjump(men) name = event_longjump(men)> Long Jump (Men) </option>
+            <option value = event_triplejump(men) name = event_triplejump(men)> Triple Jump (Men) </option>
+            <option value = event_shotput(men) name = event_shotput(men)> Shot Put (Men)</option>
+            <option value = event_discusthrow(men) name = event_discusthrow(men)> Discus Throw (Men) </option>
+            <option value = event_hammerthrow(men) name = event_hammerthrow(men)> Hammar Throw (Men) </option>
+            <option value = event_javelinthrow(men name = event_javelinthrow(men> Javelin Throw (Men) </option>
+            <option value = event_decathlon(men) name = event_decathlon(men)> Decathlon (Men) </option>
+
+            <option value= event_100meters(women) name = event_100meters(women)>100 Meters (Women)</option>
+            <option value = event_200meters(women) name = event_200meters(women)>200 Meters (Women)</option>
+            <option value = event_400meters(women) name = event_400meters(women)>400 Meters (Women)</option>
+            <option value = event_800meters(women) name = event_800meters(women)>800 Meters (Women)</option>
+            <option value = event_1500meters(women) name = event_1500meters(women)>1500 Meters (Women)</option>
+            <option value = event_5000meters(women) name = event_5000meters(women)>5000 Meters (Women)</option>
+            <option value = event_10,000meters(women) name = event_10,000meters(women)>10000 Meters (Women)</option>
+            <option value = event_100hurdles(women) name = event_100hurdles(women)>100 Hurdles (Women)</option>
+            <option value = event_3000steeplechase(women) name = event_3000steeplechase(women)>3000M Steeplechase (Women)</option>
+            <option value = event_highjump(women) name = event_highjump(women)>High Jump (Women)</option>
+            <option value = event_polevalut(women) name = event_polevalut(women)> Pole Valut (Women) </option>
+            <option value = event_longjump(women) name = event_longjump(women)> Long Jump (Women) </option>
+            <option value = event_triplejump(women) name = event_triplejump(women)> Triple Jump (Women) </option>
+            <option value = event_shotput(women) name = event_shotput(women)> Shot Put (Women)</option>
+            <option value = event_discusthrow(women) name = event_discusthrow(women)> Discus Throw (Women) </option>
+            <option value = event_hammerthrow(women) name = event_hammerthrow(women)> Hammar Throw (Women) </option>
+            <option value = event_javelinthrow(women name = event_javelinthrow(women> Javelin Throw (Women) </option>
+            <option value = event_heptathlon(women) name = event_heptathlon(women) > Heptathlon (Women) </option>
+        </select>
+        <input id=input type='text' step='any' name='metric' placeholder= "00:00.00" pattern='[0-9]{2}:[0-9]{2}.[0-9]{2}' title ='format'>
+        <button type= "submit"> Submit </button>
+    </form>
+    
+    <script>
+        function textbox() {
+            let event = document.forms['events']['myselect'].value
+            if(event.includes('0')){
+                document.getElementById('input').pattern = '[0-9]{2}:[0-9]{2}.[0-9]{2}';
+                document.getElementById('input').type = 'text'
+                document.getElementById('input').placeholder = '00:00.00'
+            }else {
+                document.getElementById('input').pattern = "{}";
+                document.getElementById('input').type = 'number'
+                document.getElementById('input').placeholder = ''
+            }
+        }
+    </script>
+</body>
+</html>
